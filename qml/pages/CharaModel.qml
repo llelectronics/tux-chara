@@ -184,7 +184,7 @@ ListModel {
         defaultText: "Turtle shot!"
     }
     ListElement {
-        name: "Kame Tux"
+        name: "Lego Tux"
         icon: "charas/tux-lego.png"
         defaultText: "Everything is awesome! Everything is cool when you're part of a team."
     }
