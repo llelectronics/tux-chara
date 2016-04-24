@@ -121,5 +121,6 @@ DISTFILES += \
     qml/pages/charas/tux2.png \
     qml/pages/SpeechBubble.qml \
     qml/pages/img/speech-bubble.png \
-    qml/pages/CharaModel.qml
+    qml/pages/CharaModel.qml \
+    qml/pages/AboutPage.qml
 

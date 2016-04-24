@@ -38,6 +38,10 @@ ApplicationWindow
     cover: Qt.resolvedUrl("cover/CoverPage.qml")
     allowedOrientations: Orientation.All
     _defaultPageOrientations: Orientation.All
+    appicon: "img/icon.png"
+    appname: "Tux-Chara"
+    version: "0.5"
+
 }
 
 
