@@ -56,13 +56,33 @@ Item {
     }
 
     property bool horizontalFlip: {
-        if (rotationSensor.reading.orientation == 1 || rotationSensor.reading.orientation == 2) {
+        if (rotationSensor.reading.orientation == 1 /*|| rotationSensor.reading.orientation == 2*/) {
             if (!verticalFlip) {
                 if (target.x + (target.width/2) > parent.width / 2) return true
                 else return false
             }
             else {
                 if (target.x + (target.width/2) > parent.width / 2) return false
+                else return true
+            }
+        }
+        else if (rotationSensor.reading.orientation == 2) {
+            if (!verticalFlip) {
+                if (target.x + (target.width/2) > parent.width / 2) return false
+                else return true
+            }
+            else {
+                if (target.x + (target.width/2) > parent.width / 2) return true
+                else return false
+            }
+        }
+        else if (rotationSensor.reading.orientation == 4) {
+            if (!verticalFlip) {
+                if (target.y + (target.width/2) > parent.height / 2) return true
+                else return false
+            }
+            else {
+                if (target.y + (target.width/2) > parent.height / 2) return false
                 else return true
             }
         }
@@ -78,9 +98,18 @@ Item {
         }
     }
     property bool verticalFlip: {
-        if (rotationSensor.reading.orientation == 1 || rotationSensor.reading.orientation == 2) {
+        if (rotationSensor.reading.orientation == 1 /*|| rotationSensor.reading.orientation == 2*/) {
             if (target.y - height > 0) return false
             else return true
+        }
+        else if (rotationSensor.reading.orientation == 2) {
+            if (target.y - height > 0) return true
+            else return false
+        }
+        else if (rotationSensor.reading.orientation == 4)
+        {
+            if (target.x - width/2 > 0) return true
+            else return false
         }
         else
         {
