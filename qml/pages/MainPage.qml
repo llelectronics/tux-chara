@@ -12,11 +12,11 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: "Close overlay"
+                text: qsTr("Close overlay")
                 onClicked: viewHelper.closeOverlay()
             }
             MenuItem {
-                text: "About"
+                text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
             }
         }
@@ -76,6 +76,18 @@ Page {
                 }
 
             }
+            SectionHeader { text: qsTr("Character Text") }
+            TextArea {
+                id: charMsg
+                anchors.left: parent.left
+                anchors.leftMargin: Theme.paddingMedium
+                width: parent.width - (2* Theme.paddingMedium)
+                height: parent.height / 3
+                text: viewHelper.characterMsg
+                onTextChanged: viewHelper.characterMsg = text
+                background: null
+            }
+
             AnimatedImage {
                 width: Theme.iconSizeExtraLarge
                 height: width

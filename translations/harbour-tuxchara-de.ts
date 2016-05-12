@@ -21,5 +21,17 @@
         <source>Character:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Close overlay</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>About</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Character Text</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>
