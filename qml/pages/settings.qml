@@ -9,7 +9,7 @@ ApplicationWindow
     cover: Qt.resolvedUrl("../cover/CoverPage.qml")
     property string appicon: "img/icon.png"
     property string appname: "Tux-Chara"
-    property string version: "0.6"
+    property string version: "0.7"
 }
 
 

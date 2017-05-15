@@ -60,6 +60,7 @@ void ViewHelper::setDefaultRegion()
 
 void ViewHelper::checkActiveSettings()
 {
+    QDBusConnection::sessionBus().registerObject("/harbour/tuxchara/overlay", this, QDBusConnection::ExportScriptableSlots);
     bool newSettings = QDBusConnection::sessionBus().registerService("harbour.tuxchara.settings");
     if (newSettings) {
         showSettings();
@@ -74,6 +75,7 @@ void ViewHelper::checkActiveSettings()
 
 void ViewHelper::checkActiveOverlay()
 {
+    QDBusConnection::sessionBus().registerObject("/harbour/tuxchara/overlay", this, QDBusConnection::ExportScriptableSlots);
     bool inactive = QDBusConnection::sessionBus().registerService("harbour.tuxchara.overlay");
     if (inactive) {
         showOverlay();
@@ -133,7 +135,6 @@ void ViewHelper::unhideOverlay()
 
 void ViewHelper::showOverlay()
 {
-    QDBusConnection::sessionBus().registerObject("/harbour/tuxchara/overlay", this, QDBusConnection::ExportScriptableSlots);
 
     qGuiApp->setApplicationName("Tux-Chara");
     qGuiApp->setApplicationDisplayName("Tux-Chara");
